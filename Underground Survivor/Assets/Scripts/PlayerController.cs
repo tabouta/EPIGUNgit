@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Animations;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private bool grounded;
     private PlayerMotor motor;
 
+    [SerializeField]
+    private Animator anim;
+
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();
@@ -26,7 +30,15 @@ public class PlayerController : MonoBehaviour
         //Calculer la vélocité/vitesse du mouvement du personnage
         float xMov = Input.GetAxisRaw("Horizontal");
         float zMov = Input.GetAxisRaw("Vertical");
-
+        if(zMov != 0)
+        {
+            anim.SetBool("IfWalking",true);
+        
+        }
+        else
+        {
+            anim.SetBool("IfWalking",false);
+        }
         Vector3 moveHorizontal = transform.right * xMov;
         Vector3 moveVertical = transform.forward * zMov;
         Vector3 velocity = (moveHorizontal + moveVertical).normalized * speed;
@@ -53,8 +65,14 @@ public class PlayerController : MonoBehaviour
     {
 	    if (Input.GetKeyDown(KeyCode.Space) && grounded)
 	    {
+            anim.SetBool("IfJumping",true);
 		    PlayerMotor.rb.AddForce(transform.up * jumpForce);
+            
 	    }
+        else
+        {
+            anim.SetBool("IfJumping",false);
+        }
     }
 	
     public void SetGroundedState(bool _grounded)

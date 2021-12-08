@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
+
 public class PlayerMotor : MonoBehaviour
 {
+   
     // Start is called before the first frame update
     [SerializeField]
     private Camera cam;
@@ -43,6 +45,7 @@ public class PlayerMotor : MonoBehaviour
         {
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
+
     }
     private void PerformRotation()
     {
