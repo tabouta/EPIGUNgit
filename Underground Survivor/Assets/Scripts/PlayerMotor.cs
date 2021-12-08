@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 [RequireComponent(typeof(Rigidbody))]
 
 public class PlayerMotor : MonoBehaviour
@@ -51,7 +52,9 @@ public class PlayerMotor : MonoBehaviour
     {
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
         cam.transform.Rotate(-cameraRotation);
+        
     }
+
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && grounded)

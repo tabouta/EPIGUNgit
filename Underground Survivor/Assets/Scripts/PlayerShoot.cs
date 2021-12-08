@@ -10,6 +10,7 @@ public class PlayerShoot : NetworkBehaviour
     
     [SerializeField]
     private LayerMask mask;
+    
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class PlayerShoot : NetworkBehaviour
     {
         RaycastHit hit;
 
-        if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,weapon.range,mask))
+        if(Physics.Raycast(weapon.Bullet.position,cam.transform.forward,out hit,weapon.range,mask))
         {
             if(hit.collider.tag == "Player")
             {
