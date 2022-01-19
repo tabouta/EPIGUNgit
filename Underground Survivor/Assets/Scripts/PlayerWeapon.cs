@@ -1,8 +1,9 @@
-﻿[System.Serializable]
-public class PlayerWeapon 
+﻿using UnityEngine;
+public class PlayerWeapon : MonoBehaviour
 {
-	public string name = "Gun";
-	public float damage = 10f;
-	public float range = 100f;
-   
+	public new string  name;
+	public float damage;
+	public float range;
+
+	public Transform Bullet;
 }
