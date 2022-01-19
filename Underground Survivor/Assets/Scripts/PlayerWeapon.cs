@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 public class PlayerWeapon : MonoBehaviour
 {
 	public new string  name;
