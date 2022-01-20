@@ -9,10 +9,14 @@ ScriptsOnlyBuild:
     - PlayerMotor
     - PlayerSetup
     - PlayerShoot
+    - PlayerUI
     - PlayerWeapon
+    - WeaponGraphics
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     - Mirror.NetworkTransformChild
+    Mirror.Editor.dll:
+    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -77,6 +81,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -90,53 +98,57 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11344}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11502}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 12002}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 12044}
+      Script: {instanceID: 12004}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 12126}
+      Script: {instanceID: 12056}
     - Class: 114
-      Script: {instanceID: 12234}
+      Script: {instanceID: 12128}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12236}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12362}
     - Class: 114
       Script: {instanceID: 12590}
     - Class: 114
       Script: {instanceID: 12836}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13050}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13238}
+      Script: {instanceID: 13174}
     - Class: 114
-      Script: {instanceID: 13422}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 13560}
+      Script: {instanceID: 13424}
     - Class: 114
-      Script: {instanceID: 13658}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 19760}
+      Script: {instanceID: 13744}
+    - Class: 114
+      Script: {instanceID: 40160}
+    - Class: 114
+      Script: {instanceID: 49100}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -150,6 +162,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -178,34 +194,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 12088}
+      Script: {instanceID: 12056}
     - Class: 114
-      Script: {instanceID: 12246}
+      Script: {instanceID: 12090}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12248}
     - Class: 114
       Script: {instanceID: 12836}
     - Class: 114
       Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 13174}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13392}
     - Class: 114
-      Script: {instanceID: 13658}
+      Script: {instanceID: 13660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,6 +255,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
@@ -525,7 +551,7 @@ ScriptsOnlyBuild:
     className: BenchmarkNetworkManager
   - hash:
       serializedVersion: 2
-      Hash: 768ba65441043f45a76213d2ac1360aa
+      Hash: e3c87ff44c6d8c95adc94acce0d0d4a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -651,7 +677,7 @@ ScriptsOnlyBuild:
     className: MatchGUI
   - hash:
       serializedVersion: 2
-      Hash: 781cddf76ed0d11b0ca96ec6dd487da7
+      Hash: 3c874ad8c2a90881faefa96b774bd1f2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSetup
@@ -703,12 +729,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: ff4753395d726a7aadce9c48dcaf99d6
@@ -889,6 +909,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: MatchInterestManagement
+  - hash:
+      serializedVersion: 2
+      Hash: 12b7f2db1b9793488cad592196b9dd59
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: cf95add559be53ae8bfdfcea86c5a18f
@@ -1167,10 +1193,16 @@ ScriptsOnlyBuild:
     className: KcpTransport
   - hash:
       serializedVersion: 2
-      Hash: 12b7f2db1b9793488cad592196b9dd59
+      Hash: fbd5fa7806257e09a1945ad1c89c8303
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PauseMenu
+    className: WeaponGraphics
+  - hash:
+      serializedVersion: 2
+      Hash: 4659f9021ac83b6a200f568a7089fa04
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerUI
   platform: 19
   scenePathNames:
   - Assets/Scenes/MenuHome.unity
